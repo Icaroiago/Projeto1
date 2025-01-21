@@ -58,13 +58,15 @@
             padding: 20px;
             margin: 20px auto;
             width: 80%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
             color: rgb(148, 141, 141);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .L3 {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             padding: 5px;
             margin: 5px auto;
@@ -77,14 +79,16 @@
             padding: 20px;
             margin: 20px auto;
             width: 80%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             color: rgb(148, 141, 141);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .restante {
             text-align: center;
-            background-color: rgba(206, 202, 202, 0.3);
+            background-color: rgba(206, 202, 202, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             width: 350px;
             font-size: 25px;
@@ -99,16 +103,21 @@
         }
 
         iframe {
-            width: 50%; /* Ajustado para tornar o vídeo maior */
+            width: 50%;
             height: 500px;
             margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.3);
         }
-
-        img {
-            width: 40%; /* Ajustado para tornar a imagem menor */
-            height: auto;
-            display: block;
-            margin: 20px auto;
+        
+        .down{
+            display:inline-block;
+            padding: 4px; 
+            margin: 14px;
+            margin-inline-start: 14px;
+            background-color: rgba(84, 141, 18, 0.8);
+            background-size: contain;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(1, 168, 1, 0.5); 
         }
 
         /* Responsividade */
@@ -226,11 +235,12 @@
         <p><strong>Fraquezas Psicológicas:</strong> Nenhuma</p>
     </div>
     <div class="LOCK">
-        <div style="text-align: center;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tF19MTuooF8?si=bZQCcGeE5L85PVBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <p style="margin: 20px 0; font-size: 35px; color: white;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tF19MTuooF8?si=bZQCcGeE5L85PVBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            <p style="margin: 20px 0; font-size: 35px; color: white;">
                 “O problema com a lealdade a uma causa é que a causa sempre trairá você.”
             </p>
-            <img src="maxresdefault.jpg" alt="Lockdown" />
+            <div class="down">
+            <img src="maxresdefault.jpg" alt="Lockdown" /></div>
         </div>
     </div>
 </body>
