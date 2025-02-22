@@ -254,14 +254,16 @@
     </div>
 </body>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.style.opacity = "0";
-        setTimeout(() => {
-            document.body.style.transition = "opacity 1s";
-            document.body.style.opacity = "1";
-        }, 100);
-    });
+    // Fade-in ao carregar a página
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        document.body.style.transition = "opacity 1s";
+        document.body.style.opacity = "1";
+    }, 100);
+});
 
+// 2. Alternar entre modo claro e escuro. (Nao utilizavel)
     function toggleTheme() {
         document.body.classList.toggle("light-mode");
         let themeButton = document.getElementById("themeButton");
@@ -283,6 +285,7 @@
         });
     });
 
+    // 4. Mensagem ao clicar na imagem do Lockdown
     document.addEventListener("DOMContentLoaded", function () {
     let lockdownImage = document.querySelector(".down img");
 
@@ -293,6 +296,7 @@
     }
 });
 
+// 5. Animação de entrada para os atributos
     window.addEventListener("scroll", function () {
         let atributos = document.getElementById("atributos");
         let posicao = atributos.getBoundingClientRect().top;
