@@ -60,10 +60,6 @@
             background-color: rgba(0, 0, 0, 0.3);
             font-size: 13px;
         }
-        p2:hover{
-            transform: scale(1.06);
-            transition: .6s;
-        }
 
         .content {
             padding: 20px;
@@ -114,7 +110,7 @@
         }
 
         iframe {
-            width: 50%;
+            max-width: 100%;
             height: 500px;
             margin: 20px auto;
             background-color: rgba(0, 0, 0, 0.3);
@@ -257,4 +253,56 @@
         </div>
     </div>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+            document.body.style.transition = "opacity 1s";
+            document.body.style.opacity = "1";
+        }, 100);
+    });
+
+    function toggleTheme() {
+        document.body.classList.toggle("light-mode");
+        let themeButton = document.getElementById("themeButton");
+        if (document.body.classList.contains("light-mode")) {
+            themeButton.innerText = "Modo Escuro";
+        } else {
+            themeButton.innerText = "Modo Claro";
+        }
+    }
+
+    // 3. Animação de Hover nos Textos
+    document.querySelectorAll("p").forEach(p => {
+        p.addEventListener("mouseover", () => {
+            p.style.transform = "scale(1.1)";
+            p.style.transition = "0.5s";
+        });
+        p.addEventListener("mouseout", () => {
+            p.style.transform = "scale(1)";
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    let lockdownImage = document.querySelector(".down img");
+
+    if (lockdownImage) {
+        lockdownImage.addEventListener("click", function () {
+            alert("Lockdown está te observando...");
+        });
+    }
+});
+
+    window.addEventListener("scroll", function () {
+        let atributos = document.getElementById("atributos");
+        let posicao = atributos.getBoundingClientRect().top;
+        let alturaTela = window.innerHeight;
+
+        if (posicao < alturaTela - 100) {
+            atributos.style.opacity = "1";
+            atributos.style.transform = "translateY(0)";
+            atributos.style.transition = "0.8s ease-out";
+        }
+    });
+</script>
 </html>
